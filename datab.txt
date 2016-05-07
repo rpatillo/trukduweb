@@ -1,0 +1,11 @@
+// Ici les commandes utilises pour MYSQL
+
+php -S localhost:8080
+
+CREATE DATABASE camagru;
+CREATE TABLE Login (login VARCHAR(255), id INT PRIMARY KEY AUTO_INCREMENT);
+INSERT INTO Login (login) VALUES ("admin");
+
+
+// save picture
+https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL

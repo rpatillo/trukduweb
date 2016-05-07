@@ -1,0 +1,83 @@
+/* CSS STYLE SHEET */
+
+body {
+    font-family: arial;
+    margin: 0;
+    background-color: #eee;
+}
+
+#wrapper {
+    width: 980px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+/* TOP BUTTONS */
+#main-navigation {
+    background: #000;
+    padding: 10px;
+}
+
+#main-navigation ul {
+    text-align: right;
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+#main-navigation li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#main-navigation a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 6px;
+}
+
+#main-navigation a.current {
+    background: #7a7a7a;
+    border-radius: 4px;
+    
+}
+
+#lead-banner img {
+    width: 100%;
+}
+/* PHOTO AREA */
+
+#image_area {
+    margin: 0 auto;    
+}
+/* FOOTER */
+
+#footer {
+    background: #000;
+    padding: 10px;
+}
+
+#footer li {
+    display: inline-block;
+    margin-left: 20px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 6px;
+}
+
+#footer a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 6px;
+}
+
+#footer ul {
+    text-align: right;
+    list-style-type: none;
+    margin-right: 10px;
+}
