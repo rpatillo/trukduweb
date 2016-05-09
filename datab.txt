@@ -23,4 +23,13 @@ CREATE TABLE camagru (login VARCHAR(255), pwd VARCHAR(255), id INTEGER PRIMARY K
 
 LINKS :
 
+Command line shell sqlite :
+https://www.sqlite.org/cli.html
+
+Autoincrement In SQLite :
+https://www.sqlite.org/autoinc.html
+
+Utiliser SQLite3 en PHP avec PDO :
+http://www.finalclap.com/faq/170-php-sqlite-pdo
+
 http://www.codingcage.com/2015/04/php-login-and-registration-script-with.html
