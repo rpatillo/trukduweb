@@ -2,10 +2,25 @@
 
 php -S localhost:8080
 
-CREATE DATABASE camagru;
-CREATE TABLE Login (login VARCHAR(255), id INT PRIMARY KEY AUTO_INCREMENT);
-INSERT INTO Login (login) VALUES ("admin");
+//CREATE DATABASE camagru;
+//CREATE TABLE Login (login VARCHAR(255), id INT PRIMARY KEY AUTO_INCREMENT);
+//INSERT INTO Login (login) VALUES ("admin");
 
 
 // save picture
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
+
+// Drivers Database
+            
+<?php
+print_r(PDO::getAvailableDrivers());
+?>
+
+sqlite3 camagru.db
+
+CREATE TABLE camagru (login VARCHAR(255), pwd VARCHAR(255), id INTEGER PRIMARY KEY AUTOINCREMENT);
+
+
+LINKS :
+
+http://www.codingcage.com/2015/04/php-login-and-registration-script-with.html
