@@ -20,6 +20,8 @@ sqlite3 camagru.db
 
 CREATE TABLE camagru (login VARCHAR(255), pwd VARCHAR(255), id INTEGER PRIMARY KEY AUTOINCREMENT);
 
+INSERT INTO camagru VALUES ('cheveux', 'osef', '5');
+
 
 LINKS :
 
