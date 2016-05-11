@@ -35,12 +35,14 @@
                 print "</table>";
             ?>
             <br />
+
             <form action='' method='POST'>
                 login  <input type='text' id='login_in' name='login_in' /><br/>
                 password    <input type='text' id='pwd_in' name = 'pwd_in' /><br/>
                 <input type='submit' name='action'  value="Log_in" />
             </form>
         
+
             </div>
         <?php include 'footer.php';?>
     </body>
@@ -49,39 +51,37 @@
 $db = new PDO ('sqlite:camagru.db') or die ("cannot open"); 
 
 // Script creation compte
- if ($_POST['action'] == 'Save') {
-  $stmt = $db->prepare("INSERT INTO camagru ('login', 'pwd', 'id') VALUES (:login, :pwd, :id)");
-  $stmt->bindValue('login', $_POST['login'], PDO::PARAM_STR);
-  $stmt->bindValue('pwd', $_POST['pwd'], PDO::PARAM_STR);
-  $stmt->bindValue('id', $_POST['id'], PDO::PARAM_INT);
-  $stmt->execute(); 
+if ($_POST['action'] == 'Save') {
+    $stmt = $db->prepare("INSERT INTO camagru ('login', 'pwd', 'id') VALUES (:login, :pwd,              :id)");
+    $stmt->bindValue('login', $_POST['login'], PDO::PARAM_STR);
+    $stmt->bindValue('pwd', $_POST['pwd'], PDO::PARAM_STR);
+    $stmt->bindValue('id', $_POST['id'], PDO::PARAM_INT);
+    $stmt->execute(); 
+    print_r ($stmt);
 }
 
 // Script suppression compte
 elseif ($_POST['action'] == 'Delete') {
- $stmt = $db->prepare("DELETE FROM camagru WHERE login = :login");
+    $stmt = $db->prepare("DELETE FROM camagru WHERE login = :login");
     $stmt->bindValue('login', $_POST['login'], PDO::PARAM_STR);
-$stmt->execute();
+    $stmt->execute();
 }
 
 // Check Login
 if ($_POST['action'] == 'Log_in') {
-    $myusername = $_POST['login_in'];
-    $mypassword = $_POST['pwd_in'];
 
-    $myusername = stripslashes($myusername);
-    $mypassword = stripslashes ($mypassword);
-
-    $query = "SELECT * FROM camagru WHERE login='$myusername' AND                                    pwd='$mypassword'";
-    $result = mysql_query($query);
-    $count = mysql_num_rows($result);
-
-    if($count==1){
-        echo'worked';
-    }
-    else {
-        echo 'failed';
-    }
+    $stmt = $db->query('SELECT EXISTS(SELECT * FROM camagru WHERE login= :login AND pwd= :pwd)');
+     print_r ($stmt);
+    $stmt->bindValue(':login', $_POST['login_in'], PDO::PARAM_STR);
+    $stmt->bindValue(':pwd', $_POST['pwd_in'], PDO::PARAM_STR);
+    $result = $stmt->execute();
+    
+//    if ($result == 1) {
+//        echo'worked';
+//    }
+//    else {
+//        echo 'failed';
+//    }
 }
 ?>
     
