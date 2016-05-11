@@ -70,7 +70,7 @@ elseif ($_POST['action'] == 'Delete') {
 // Check Login
 if ($_POST['action'] == 'Log_in') {
 
-    $stmt = $db->query('SELECT EXISTS(SELECT * FROM camagru WHERE login= :login AND pwd= :pwd)');
+    $stmt = $db->prepare ('SELECT EXISTS(SELECT * FROM camagru WHERE login= :login AND pwd= :pwd)');
      print_r ($stmt);
     $stmt->bindValue(':login', $_POST['login_in'], PDO::PARAM_STR);
     $stmt->bindValue(':pwd', $_POST['pwd_in'], PDO::PARAM_STR);

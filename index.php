@@ -17,3 +17,7 @@
         <?php include 'footer.php';?>
   </body>
 </html>
+
+
+PDOStatement Object ( [queryString] => INSERT INTO camagru ('login', 'pwd', 'id') VALUES (:login, :pwd, :id) )
+PDOStatement Object ( [queryString] => SELECT EXISTS (SELECT * FROM camagru WHERE login= :login AND pwd= :pwd) )
