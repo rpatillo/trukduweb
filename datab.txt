@@ -34,4 +34,7 @@ https://www.sqlite.org/autoinc.html
 Utiliser SQLite3 en PHP avec PDO :
 http://www.finalclap.com/faq/170-php-sqlite-pdo
 
+WHERE EXISTS :
+http://www.techonthenet.com/sqlite/exists.php
+
 http://www.codingcage.com/2015/04/php-login-and-registration-script-with.html
