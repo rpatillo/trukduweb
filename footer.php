@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html>
 <body>
     <div id="wrapper">
     <nav id="footer">
@@ -10,3 +12,4 @@
     </nav>
     </div>
 </body>
+</html>

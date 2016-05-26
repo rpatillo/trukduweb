@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<?PHP
+session_start();
+?>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -74,12 +77,11 @@
     var data = canvas.toDataURL();
     photo.setAttribute('src', data);
     }
- /*   
+   
     function savepicture() {
-        console.log("SVG");
-        file_put_contents("/image/bla.jpg", data)        
+        console.log("SVG");       
     }
-*/
+
   startbutton.addEventListener('click', function(ev){
       takepicture();
     ev.preventDefault();

@@ -3,9 +3,8 @@
 php -S localhost:8080
 
 //CREATE DATABASE camagru;
-//CREATE TABLE Login (login VARCHAR(255), id INT PRIMARY KEY AUTO_INCREMENT);
 //INSERT INTO Login (login) VALUES ("admin");
-
+//CREATE TABLE camagru (login VARCHAR(255), pwd VARVHAR(255), mail VARCHAR(255), id INTEGER PRIMARY KEY);
 
 // save picture
 https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/toDataURL
@@ -17,11 +16,6 @@ print_r(PDO::getAvailableDrivers());
 ?>
 
 sqlite3 camagru.db
-
-CREATE TABLE camagru (login VARCHAR(255), pwd VARCHAR(255), id INTEGER PRIMARY KEY AUTOINCREMENT);
-
-INSERT INTO camagru VALUES ('cheveux', 'osef', '5');
-
 
 LINKS :
 
@@ -38,3 +32,7 @@ WHERE EXISTS :
 http://www.techonthenet.com/sqlite/exists.php
 
 http://www.codingcage.com/2015/04/php-login-and-registration-script-with.html
+
+// FORM + SWITCH
+
+http://www.123contactform.com/simple-php-contact-form.html
