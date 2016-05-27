@@ -4,7 +4,7 @@ session_start();
 ?>
 <html>
 <body>
-    <div id="wrapper">
+    <div id="wrapperheader">
         <nav id="main-navigation">
             <ul>
                 <li><a href="/index.php">Home</a></li>

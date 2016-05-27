@@ -11,7 +11,7 @@ session_start();
 
   <body>
       <?php include 'header.php';?>
-        <div id="wrapper">
+        <div id="wrapperbody">
             <div id="lead-banner">
                 <img src="/img/CamagruBig.jpg" alt="Camagru">
             </div>

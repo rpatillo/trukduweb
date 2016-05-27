@@ -10,7 +10,7 @@ session_start();
     </head>
     <body>
         <?php include 'header.php';?>
-        <div id="wrapper">
+        <div id="wrapperbody">
             <img src="/img/CamagruBig.jpg" width="100%">
             <nav id="image_area">
                 <video id="video"></video>

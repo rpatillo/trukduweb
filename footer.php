@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <div id="wrapper">
+    <div id="wrapperfooter">
     <nav id="main-navigation">
         <ul>
             <li><a target="_blank" href="/phpliteadmin.php">PhpLite Admin</a></li>
