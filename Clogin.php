@@ -37,9 +37,10 @@ session_start();
                 if ($stmt->fetch()) {
                     echo 'Sorry, this user name already exist.';
                 } else {
+                    $pass = hash('whirlpool', 'Toto' . $_POST['passwd']);
                     $stmt = $db->prepare("INSERT INTO camagru ('login', 'pwd', 'mail', 'id') VALUES (:login, :pwd, :mail, null)");
                     $stmt->bindValue('login', $_POST['login'], PDO::PARAM_STR);
-                    $stmt->bindValue('pwd', $_POST['passwd'], PDO::PARAM_STR);
+                    $stmt->bindValue('pwd', $pass, PDO::PARAM_STR);
                     $stmt->bindValue('mail', $_POST['mail'], PDO::PARAM_STR);
                     $stmt->execute();
                     $_SESSION['login'] = $_POST['login'];
@@ -47,7 +48,7 @@ session_start();
                     header("refresh : 5, url=/photo.php"); 
                 }
                 // rajouter une protection sup ? (concatener avec un autre ?)
-                //$pass = hash('whirlpool', $_POST['passwd']);
+                //$pass = hash('whirlpool', 'Toto' . $_POST['passwd']);
             }
             ?>
             
@@ -55,9 +56,9 @@ session_start();
         <?php include 'footer.php';?>
   </body>
 </html>
+
 <!--
 $_POST['login'] !== NULL && $_POST['passwd'] !== NULL && 
 $_POST['submit'] !== NULL &&
-
  && $_POST['passwd'] !== "" && $_POST['login'] !== ""
 -->

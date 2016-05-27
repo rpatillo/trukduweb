@@ -2,11 +2,11 @@
 <html>
 <body>
     <div id="wrapper">
-    <nav id="footer">
+    <nav id="main-navigation">
         <ul>
             <li><a target="_blank" href="/phpliteadmin.php">PhpLite Admin</a></li>
             <li><a href="/sqliteRead.php">Database state</a></li>
-            <li>Made by rpatillo</li>
+            <li><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Made by rpatillo</a></li>
             <li><a href="http://www.42.fr/">42 school</a></li>
         </ul>
     </nav>

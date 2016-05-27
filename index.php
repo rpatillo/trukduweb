@@ -5,15 +5,25 @@
     <title>Camagru</title>
     <link href="style.css" type="text/css" rel="stylesheet">
   </head>
-
+<header><?php include 'header.php';?></header>
   <body>
-      <?php include 'header.php';?>
+      
         <div id="wrapper">
             <div id="lead-banner">
                 <img src="/img/CamagruBig.jpg" alt="Camagru">
             </div>
-            <a href="/photo.php">[Goto Pictures]</a>
+            <ul class="panels">
+                <li>
+                    <div class="front" style="background: #267df4">Hello</div>
+                    <div class="back" style="background: #4c8fea">World</div>
+                </li>
+                <li>
+                    <div class="front" style="background: #267df4">Hello</div>
+                    <div class="back" style="background: #4c8fea">World</div>
+                </li>
+            </ul>
         </div>
-        <?php include 'footer.php';?>
+        
   </body>
+    <footer><?php include 'footer.php';?></footer>
 </html>
