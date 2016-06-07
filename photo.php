@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <?PHP
 session_start();
 ?>
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -70,16 +70,42 @@ session_start();
     }
   }, false);
 
-  function takepicture() {
-    canvas.width = width;
-    canvas.height = height;
-    canvas.getContext('2d').drawImage(video, 0, 0, width, height);
-    var data = canvas.toDataURL();
-    photo.setAttribute('src', data);
+    function takepicture() {
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext('2d').drawImage(video, 0, 0, width, height);
+        var data = canvas.toDataURL();      
+        data = data.replace('data:image/png;base64,', '');
+        
+   console.log(data);
+      
+ //       var postData = JSON.stringify({ imgData: data });
+      
+    
+//              if(window.openDatabase){
+//              var shortName = 'tata.db';
+//              var version = '1.0';
+//              var displayName = 'Display Information';
+//              var maxSize = 65536; // in bytes
+//              //db = openDatabase(shortName, version, displayName, maxSize);
+//                  
+//            console.log("TOTO");
+//        }
+      
+//    photo.setAttribute('src', data);
+//      if (window.openDatabase) {
+//        var db = openDatabase('./camagru.db', '1.0', 'database', 2000000);
+//        db.transaction(function (tx) {
+//            tx.executeSql('CREATE TABLE foo (id unique, text)');
+//            console.log("TEST!");
+//        });
+//  
+//      }
     }
    
     function savepicture() {
-        console.log("SVG");       
+        console.log(data);
+        console.log("SVG");
     }
 
   startbutton.addEventListener('click', function(ev){
@@ -94,3 +120,10 @@ session_start();
 
 })();
 </script>
+
+
+<?PHP
+    if ($_GET['pipou']) {
+        echo 'OK!';
+    }
+?>

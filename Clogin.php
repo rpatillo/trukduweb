@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <?PHP
 session_start();
 ?>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8"/>
@@ -55,9 +55,9 @@ session_start();
                 } else {
                     $pass = hash('whirlpool', 'Toto' . $_POST['passwd']);
                     $stmt = $db->prepare("INSERT INTO camagru ('login', 'pwd', 'mail', 'id') VALUES (:login, :pwd, :mail, null)");
-                    $stmt->bindValue('login', $_POST['login'], PDO::PARAM_STR);
-                    $stmt->bindValue('pwd', $pass, PDO::PARAM_STR);
-                    $stmt->bindValue('mail', $_POST['mail'], PDO::PARAM_STR);
+                    $stmt->bindValue(':login', $_POST['login'], PDO::PARAM_STR);
+                    $stmt->bindValue(':pwd', $pass, PDO::PARAM_STR);
+                    $stmt->bindValue(':mail', $_POST['mail'], PDO::PARAM_STR);
                     $stmt->execute();
                     echo $_POST['login'] . ' your account has been created, a mail as been sent to you. </br>';
                     
@@ -84,9 +84,7 @@ session_start();
                         $_SESSION['login'] = $_POST['SubLog'];
                         echo 'Welcome ' . $_SESSION['login']; 
                    } else {
-                        echo $_POST['SubLog'];
-                        echo $pass;
-                        echo 'Sorry, this user name already exist.';
+                        echo 'Sorry, this user does not exist. Please, check your login/password';
                 }
             }
             ?>

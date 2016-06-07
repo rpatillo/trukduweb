@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<?PHP
-session_start();
-?>
+
 <html>
 <body>
     <div id="wrapperheader">

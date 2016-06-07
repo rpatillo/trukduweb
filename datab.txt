@@ -36,3 +36,7 @@ http://www.codingcage.com/2015/04/php-login-and-registration-script-with.html
 // FORM + SWITCH
 
 http://www.123contactform.com/simple-php-contact-form.html
+
+https://developer.mozilla.org/fr/docs/Web/Guide/HTML/HTML5
+
+http://zetcode.com/db/sqlite/joins/
